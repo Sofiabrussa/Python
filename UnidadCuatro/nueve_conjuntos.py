@@ -3,7 +3,7 @@
 Estructura de datos que permite almacenar y manipular colecciones de elementos. 
 Elimina automaticamente elementos duplicados
 No admiten acceso indexado
-Busuqeda mas rapida porque no recorre cada elemento sino que los localiza en base a su criterio 
+Busqueda mas rapida porque no recorre cada elemento sino que los localiza en base a su criterio 
 de dispersion 
 """
 

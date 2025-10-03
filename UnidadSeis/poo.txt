@@ -1,0 +1,97 @@
+------------------------------- PARADIGMA ORIENTADO A OBJETOS -------------------------------
+
+Es un paradigma de programación que organiza el código alrededor de objetos, los cuales son instancias de clases. 
+Los objetos se definen mediante clases, que actúan como plantillas o moldes para crear instancias específicas. 
+Cada objeto tiene atributos (propiedades o características) que describen su estado y métodos (funciones o comportamientos) que definen su capacidad para realizar acciones
+ y responder a eventos.
+
+
+La POO se basa en cuatro principios fundamentales:
+
+1) Abstracción
+Se identifican las propiedades (atributos) y acciones (métodos) relevantes de un objeto y se encapsulan en una clase.
+
+2) Encapsulamiento
+Consiste en ocultar los detalles internos de un objeto y proporcionar una interfaz para interactuar con él. 
+Los datos (atributos) y las funciones (métodos) de un objeto se encapsulan dentro de la clase, y solo se accede a ellos a través de métodos públicos definidos en la interfaz.
+
+3) Herencia
+Permite crear nuevas clases basadas en clases existentes, aprovechando las características y comportamientos heredados. 
+
+4) Polimorfismo
+Permite que un objeto pueda presentar diferentes formas o comportamientos según el contexto en el que se utilice. 
+
+
+----------------------------------- Clases y objetos -----------------------------------
+Cada objeto encapsula su propio estado y comportamiento, lo que permite modelar de manera más precisa las entidades y relaciones del dominio del problema.
+Cada objeto tiene atributos que describen sus características y métodos que definen sus comportamientos o acciones asociadas. Muchos objetos comparten 
+características que los definen, pudiendo ser agrupados o clasificados bajo una misma definición.
+
+Una clase actúa como un modelo o plano para la creación de objetos. Contiene la estructura y el comportamiento que se aplicarán a cada instancia de esa clase.
+Cada objeto es una instancia individual y concreta de esa clase.
+
+----------------------------------- Constructor -----------------------------------
+
+El método constructor se denomina __init__ y para funcionar requiere recibir como primer parámetro formal, el identificador "self"
+Se ejecuta automáticamente cada vez que creás un objeto (una instancia) de esa clase.
+Sirve para inicializar los atributos del objeto con valores que vos le pases, o con valores por defecto.
+
+Las clases sólo pueden poseer un único constructor.
+
+----------------------------------- Referencias -----------------------------------
+Las variables de tipo object se denominan referencias y su valor efectivamente no es una instancia concreta de alguna clase. 
+El dato que almacenan es la identidad de un objeto, es decir, la dirección de memoria donde el objeto se encuentra.
+
+p1 = Persona(documento=1255, nombre="Juan", apellido="Perez")
+La variable p1 no guarda directamente el objeto, sino una referencia: es decir, una “flecha” que apunta a la dirección de memoria donde vive ese objeto.
+
+p3 = p2
+No se copia el objeto, solo se copia la referencia. Entonces p2 y p3 apuntan al mismo objeto.
+Cualquier cambio que hagas a través de p2 también se verá reflejado en p3, porque ambos están conectados al mismo objeto.
+
+
+------------------------------------- Metodos -------------------------------------
+Los objetos son entidades que encapsulan tanto datos (atributos) como comportamientos (métodos) relacionados.
+
+Cuando un objeto envía un mensaje a otro, está solicitando al objeto receptor que realice una acción o que proporcione información. 
+Este proceso se denomina “paso de mensajes”. La forma de implementar este mecanismo de mensajes se denomina “métodos”. 
+
+Los métodos son funciones asociadas a un objeto particular que definen su comportamiento y permiten que otros objetos interactúen con él.
+
+Los métodos se definen como funciones que reciben parámetros, pero el primer parámetro es el self. 
+Esta referencia self permite que el método acceda a los atributos y otros métodos del objeto actual
+
+Además un objeto puede colaborar con otros objetos para llevar a cabo una tarea o cumplir con un objetivo específico.
+
+
+------------------------------- ENCAPSULAMIENTO -------------------------------
+Los objetos se comporten como “cápsulas”, es decir, como unidades cerradas que protegen su implementación interna.
+En lugar de permitir el acceso directo, los objetos deben comunicarse entre sí únicamente a través del paso de mensajes.
+
+se recomienda ocultar los atributos de otros objetos y establecer que cualquier consulta o modificación de un atributo 
+debe realizarse mediante el envío de mensajes específicos al objeto. De esta manera, el objeto tiene un control total sobre 
+la validez de sus atributos
+
+el encapsulamiento también brinda al objeto la capacidad de decidir si mostrar o no los datos almacenados en sus atributos 
+cuando otros objetos los consultan.
+
+Para implementar el encapsulamiento, una de las formas preferidas es utilizando el decorador @property. Este decorador permite
+programar los métodos de consulta y asignación, es decir, un método para obtener el valor de un atributo y otro método asociado 
+para asignar un nuevo valor a ese mismo atributo.
+
+métodos: getters (método de consulta) y setters (método de asignación)
+
+
+------------------------------- Métodos mágicos -------------------------------
+Se invocan de manera implícita, es decir, no se llaman directamente utilizando la sintaxis tradicional de envío de mensajes o llamada a funciones.
+Sus nombres comienzan y terminan con dos guiones bajos (__).
+
+Los objetos no tienen la capacidad inherente de realizar operaciones entre ellos como la suma o la comparación de igualdad de sus valores.
+
+__str__ : Al definir este método en una clase, se puede controlar cómo se verá una instancia de esa clase cuando se imprima o se convierta en una cadena.
+Su lógica radica en mostrar, en formato de cadena, todos o algunos de los valores almacenados en los atributos del objeto.
+__lt__ : Menor que
+__gt__ : mayor que
+__add__ : Suma
+__eq__ : comparación por igualdad
+__ne__ : comparación por desigualdad

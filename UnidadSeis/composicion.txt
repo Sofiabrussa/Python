@@ -1,0 +1,26 @@
+------------------------------------------ Composición ------------------------------------------ 
+
+La composición es una forma de construir objetos complejos a partir de otros objetos más simples.
+En lugar de que una clase lo tenga "todo adentro", puede contener objetos de otras clases como atributos.
+
+👉 Dicho de otra forma:
+Herencia = "soy un tipo de..." (ej: un Perro es un tipo de Animal).
+Composición = "tengo un..." (ej: un Coche tiene un Motor).
+
+⚖️Cardinalidad
+La cardinalidad es cuántos objetos de una clase pueden estar contenidos dentro de otra:
+- 0 o 1: un objeto puede tener cero o uno de otro (ej: un Jugador puede o no tener un Contrato).
+- constante (ej: 2, 3): un objeto tiene un número fijo de otros (ej: un Partido tiene exactamente 2 equipos).
+- variable (muchos): un objeto puede tener un número desconocido de otros (ej: un Equipo tiene muchos jugadores).
+
+⚙️Implementación en Python
+La composición normalmente se implementa con atributos que son instancias de otras clases, o colecciones 
+(listas, diccionarios) que guardan varias instancias.
+
+- En la clase Contenedora se agrega un atributo de alguno de los tipos de colección.
+- En el constructor de la clase contenedora no recibir un parámetro para asignar la colección, únicamente debe ser instanciada vacía.
+- No agregar métodos de asignación y consulta para la colección.
+- En la clase que contiene hay que hacer un método que agregue objetos de otra clase a su colección interna
+
+
+hasta apgina 64 

@@ -3,5 +3,5 @@ Este repositorio reúne mis prácticas, proyectos y ejercicios en **Python**, re
 
 El objetivo principal es documentar mi progreso, experimentar con librerías y dejar un portfolio de ejemplos prácticos en distintos ámbitos de la programación.  
 
-Materia: DAO
+Materia: DAO.
 

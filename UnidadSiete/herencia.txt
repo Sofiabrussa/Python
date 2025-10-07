@@ -1,0 +1,29 @@
+------------------------------------------------ HERENCIA ------------------------------------------------
+Este mecanismo se aplica cuando existen clases que, aunque comparten similitudes notables, no son lo suficientemente
+idénticas como para ser consideradas como una única clase.
+
+El proceso de herencia posibilita la creación de una nueva clase basada en una clase preexistente, sin la necesidad de 
+duplicar y repetir el código de la clase original. De esta manera, se evita la tarea de copiar y pegar la implementación
+de una clase para crear una nueva.
+
+" La herencia implica que una clase derivada (o subclase) hereda propiedades y métodos de una clase base (o superclase).
+ La subclase puede agregar nuevas funcionalidades o modificar las existentes, pero también hereda la estructura y el 
+ comportamiento de la superclase. "
+
+------------------------------------------------ “Es un” ------------------------------------------------
+Un objeto de la clase derivada ES UN objeto de la clase base
+
+# Definimos la clase base
+class Vehiculo
+
+# Definimos la clase derivada, que hereda de Vehiculo
+class Automovil(Vehiculo)
+
+------------------------------------------------ Función super ------------------------------------------------
+En los métodos de las clases derivadas se dispone de una referencia denominada super la cual referencia al objeto 
+que recibió el mensaje, pero permitiendo acceder únicamente a los miembros heredados.
+
+El uso de super debe estar focalizado en acceder a aquellos miembros que no pueden ser alcanzados mediante self.
+self → referencia al objeto actual (instancia de la clase derivada).
+super() → referencia al comportamiento de la clase base (permite acceder a lo heredado sin recursión).
+
